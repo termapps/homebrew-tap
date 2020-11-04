@@ -14,6 +14,8 @@ sed -i -E "s/version \"[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*\"/version \"${VERSI
 sed -i -E "s/sha256 \"[0-9a-f]*\" # mac/sha256 \"${MAC_SHA}\" # mac/" Formula/$NAME.rb
 sed -i -E "s/sha256 \"[0-9a-f]*\" # linux/sha256 \"${LINUX_SHA}\" # linux/" Formula/$NAME.rb
 
+git config --global user.email "pavan.sss1991@gmail.com"
+git config --global user.name "Pavan Kumar Sunkara"
 git add Formula/$NAME.rb
 git commit -m "$NAME: update $VERSION"
 git push origin master
