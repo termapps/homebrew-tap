@@ -1,6 +1,6 @@
 class Enquirer < Formula
   version "0.5.0"
-  desc "Command Line Utility for Stylish Interactive Prompts"
+  desc "Command line utility for stylish interactive prompts"
   homepage "https://github.com/termapps/enquirer"
 
   if OS.mac?
