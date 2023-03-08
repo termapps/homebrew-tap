@@ -5,7 +5,7 @@
 Install directly
 
 ```
-brew install termapps/tap/<formula>`
+brew install termapps/tap/<formula>
 ```
 
 Or install via tap
