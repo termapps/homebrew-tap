@@ -1,4 +1,4 @@
-# TermApps Tap
+# Terminal Applications Tap
 
 ## How do I install these formulae?
 
