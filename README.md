@@ -1,4 +1,4 @@
-# Terminal Applications Tap
+# Terminal Applications Homebrew Tap
 
 ## How do I install these formulae?
 
