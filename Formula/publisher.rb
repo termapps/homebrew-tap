@@ -1,22 +1,27 @@
 class Publisher < Formula
-  version "0.0.0"
-  desc "Command line utility for managing CLI tool distributions"
+  version "0.0.3"
+  description "Tool to publish & distribute CLI tools"
   homepage "https://github.com/termapps/publisher"
+  license "MIT"
 
   if OS.mac?
-    url "https://github.com/termapps/publisher/releases/download/v#{version}/plot-v#{version}-x86_64-apple-darwin.zip"
-    sha256 "5ed6475a2905bed8a880e6c94c095cfa71160ef748f8e02f9f1a832057e17e0f" # mac
+    if Hardware::CPU.arm?
+      url "https://github.com/termapps/publisher/releases/download/v#{version}/publisher-#{version}-aarch64-apple-darwin.zip"
+      sha256 "d439173f77aac3ba231c6d819ea6fcb12b0db175ce5d0261973576c8700ab137"
+    else
+      url "https://github.com/termapps/publisher/releases/download/v#{version}/publisher-#{version}-x86_64-apple-darwin.zip"
+      sha256 "c3b0b7da7ff2096b34cfab839c5e6a29dcc1852570345b479412366644ad51b9"
+    end
   elsif OS.linux?
-    url "https://github.com/termapps/publisher/releases/download/v#{version}/plot-v#{version}-x86_64-unknown-linux-gnu.zip"
-    sha256 "b906bd9708f9e24c538bfe64c125d5dfa27a397b4e5f096c5956569b2c63ab7b" # linux
+     url "https://github.com/termapps/publisher/releases/download/v#{version}/publisher-#{version}-x86_64-unknown-linux-gnu.zip"
+     sha256 "b23e6657c19ccf0cd751bd85f8d3b026ec5bebdad34aa3dba712679711893705"
   end
 
   def install
     bin.install "publisher"
-    man1.install "publisher.1"
   end
 
   test do
-    system "#{bin}/publisher", "--version"
+    system "#{bin}/publisher --version"
   end
 end
