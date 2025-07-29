@@ -1,5 +1,5 @@
 class Publisher < Formula
-  version "0.1.13"
+  version "0.1.14"
   desc "Tool to publish & distribute CLI tools"
   homepage "https://github.com/termapps/publisher"
   license "MIT"
@@ -7,14 +7,14 @@ class Publisher < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/termapps/publisher/releases/download/v#{version}/publisher-v#{version}-aarch64-apple-darwin.zip"
-      sha256 "29f881a9a1d1c075b99b3b8a3ac3a9fa84a8d466927b92129ff2573c07ddbeab"
+      sha256 "7c033ac90e174f8e3c75f884032c1a37a9bde16b31028ff9698f83e7591c2241"
     else
       url "https://github.com/termapps/publisher/releases/download/v#{version}/publisher-v#{version}-x86_64-apple-darwin.zip"
-      sha256 "9479f00717be9c294804a847e0df92d3a58fef2fc8cf08b62acc408c863fa344"
+      sha256 "ff7ed5f13d794c7e157ffe0aa6bd67d02d49d4aa7a087ca2d778db89c343b8a3"
     end
   elsif OS.linux?
      url "https://github.com/termapps/publisher/releases/download/v#{version}/publisher-v#{version}-x86_64-unknown-linux-gnu.zip"
-     sha256 "f3f372638d4bc504632d3cef8f6510263b2a882263a680b5458e0f98e97d23d6"
+     sha256 "59bba724afdfdc9f1ef948c5076d6c8960fbc2b2f29bc2abc26d3ecf1ecd497c"
   end
 
   def install
