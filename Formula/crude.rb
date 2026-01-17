@@ -1,5 +1,5 @@
 class Crude < Formula
-  version "0.1.2"
+  version "0.1.4"
   desc "Migration toolkit for databases"
   homepage "https://github.com/termapps/crude"
   license "MIT"
@@ -7,14 +7,14 @@ class Crude < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/termapps/crude/releases/download/v#{version}/crude-v#{version}-aarch64-apple-darwin.zip"
-      sha256 "91c0dba9a63c7d15c148784b5889c80f2626b1c0f42153ec8bf070633b905c67"
+      sha256 "f807c11094652e9e4aeb2de47f8506ca0f34c9d0882b70f9b31e0b658bfadaa9"
     else
       url "https://github.com/termapps/crude/releases/download/v#{version}/crude-v#{version}-x86_64-apple-darwin.zip"
-      sha256 "1d24e8f2ec600b544f3acda8004a21810b302fbdb8588e6e64c240a9d7a494a2"
+      sha256 "230f3ac564e1eb132cdf172ca167814484c3ef715969af25ef4186684ef7f401"
     end
   elsif OS.linux?
      url "https://github.com/termapps/crude/releases/download/v#{version}/crude-v#{version}-x86_64-unknown-linux-gnu.zip"
-     sha256 "3a743186b5e71fddbbec532037942c6c81d0d1bfd9351f0f1bc05c7c193ec5ea"
+     sha256 "7cd2747855e68b84fb5278f1ed702326456424afbbca49715a671f477c54e074"
   end
 
   def install
